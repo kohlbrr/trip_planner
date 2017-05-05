@@ -4,7 +4,10 @@
   "description": "",
   "main": "ap.js",
   "scripts": {
-    "start": "nodemon ./app.js"
+    "start:production": "node ./app.js",
+    "start:dev": "nodemon -e html,css,js ./app.js",
+    "start": "npm run start:dev",
+    "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets"
   },
   "repository": {
     "type": "git",
